@@ -1,0 +1,27 @@
+{
+  "name": "Honeycomb: The World Beyond",
+  "steam_appid": 1510440,
+  "developer": ["Frozen Way"],
+  "publisher": ["Snail Games USA"],
+  "genres": ["Adventure", "Casual", "Indie", "Sci-fi Survival", "Sandbox"],
+  "tags": ["Survival", "Sandbox", "Base Building", "Exploration", "Sci-fi", "Bioengineering", "Creature Collecting"],
+  "release_date": "8 Sep, 2026",
+  "platforms": {"windows": true, "ps5": true, "xbox_series": true},
+  "short_description": "You are Hennessy, a bioengineer stranded on the alien planet Sota7. Explore diverse biomes, discover exotic lifeforms, and master the art of crossbreeding to adapt and survive. Build your base of operations and unlock the mysteries of a world beyond.",
+  "header_image": "assets/steam_header.jpg",
+  "screenshots": [
+    "assets/screenshot_1.jpg",
+    "assets/screenshot_2.jpg",
+    "assets/screenshot_3.jpg",
+    "assets/screenshot_4.jpg",
+    "assets/screenshot_5.jpg",
+    "assets/screenshot_6.jpg",
+    "assets/screenshot_7.jpg",
+    "assets/screenshot_8.jpg"
+  ],
+  "captured_at": "2026-09-02T11:50:00Z",
+  "steam_url": "https://store.steampowered.com/app/1510440/Honeycomb_The_World_Beyond/",
+  "price_note": "Game not yet released; wishlist available on Steam",
+  "demo_available": true,
+  "demo_note": "Free 1-hour demo released on Steam August 31, 2026"
+}

@@ -1,0 +1,68 @@
+{
+  "domain": "honeycombtheworldbeyond.wiki",
+  "checked_at": "2026-09-02T12:00:00Z",
+  "seo_requirements": {
+    "index_html": {
+      "has_title": true,
+      "title_contains_keyword": true,
+      "has_meta_description": true,
+      "description_length_ok": true,
+      "has_canonical": true,
+      "has_og_tags": true,
+      "has_twitter_card": true,
+      "has_json_ld_website": true,
+      "has_json_ld_videogame": true,
+      "has_json_ld_faq": true,
+      "has_json_ld_breadcrumb": true,
+      "has_h1": true,
+      "h1_contains_keyword": true,
+      "has_screenshot_gallery": true,
+      "has_steam_cta": true,
+      "has_footer_attribution": true
+    },
+    "inner_pages": {
+      "guides_html": { "has_howto_schema": true, "has_breadcrumb": true },
+      "crossbreeding_html": { "has_breadcrumb": true, "has_breed_diagram": true },
+      "biomes_html": { "has_breadcrumb": true, "has_biome_table": true },
+      "species_html": { "has_breadcrumb": true, "has_species_table": true },
+      "base_building_html": { "has_breadcrumb": true, "has_priority_table": true },
+      "demo_guide_html": { "has_breadcrumb": true }
+    },
+    "supporting_files": {
+      "robots_txt": true,
+      "sitemap_xml": true,
+      "ads_txt": true,
+      "llms_txt": true,
+      "site_webmanifest": true,
+      "favicon_svg": true,
+      "privacy_html": true
+    },
+    "content_intents_covered": {
+      "beginner_survival_guide": true,
+      "crossbreeding_grafting_allogamy": true,
+      "sota7_biomes": true,
+      "species_database": true,
+      "base_building": true,
+      "demo_walkthrough": true,
+      "hunger_thirst_health_survival_mechanics": true,
+      "eon_corp_story_guide": "partial"
+    },
+    "design_tokens_extracted": {
+      "from_screenshots": true,
+      "color_bg": "#091c18",
+      "color_brand": "#4ecdc4",
+      "color_accent": "#f7d060",
+      "color_bio": "#8b5cf6",
+      "ui_components_reversed": ["scan-tooltip", "hud-stat-bars", "hotbar-circle", "compass-arc"]
+    }
+  },
+  "deployment_requirements": {
+    "github_repo_created": false,
+    "cloudflare_pages_deployed": false,
+    "custom_domain_configured": false,
+    "gsc_submitted": false,
+    "bing_submitted": false,
+    "adsense_applied": false
+  },
+  "notes": "Pre-launch state. Full species names and trait values to be updated post Sep 8, 2026 launch. Deployment requires user action for domain DNS, GitHub repo, and GSC/Bing verification."
+}

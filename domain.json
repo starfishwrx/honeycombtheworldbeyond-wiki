@@ -1,0 +1,35 @@
+{
+  "domain": "honeycombtheworldbeyond.wiki",
+  "registrar": "spaceship",
+  "cloudflare_zone": "honeycombtheworldbeyond.wiki",
+  "pages_project": "honeycombtheworldbeyond-wiki",
+  "target_records": [
+    {
+      "type": "CNAME",
+      "name": "honeycombtheworldbeyond.wiki",
+      "content": "honeycombtheworldbeyond-wiki.pages.dev",
+      "proxied": true
+    },
+    {
+      "type": "CNAME",
+      "name": "www",
+      "content": "honeycombtheworldbeyond-wiki.pages.dev",
+      "proxied": true
+    }
+  ],
+  "credentials": {
+    "spaceship_api_key_env": "SPACESHIP_API_KEY",
+    "spaceship_api_secret_env": "SPACESHIP_API_SECRET",
+    "cloudflare_api_token_env": "CLOUDFLARE_API_TOKEN"
+  },
+  "state_file": "domain-state.json",
+  "verify": {
+    "expected_ns_contains": ["cloudflare"],
+    "expected_https_status": [200],
+    "check_urls": [
+      "https://honeycombtheworldbeyond.wiki/",
+      "https://honeycombtheworldbeyond.wiki/robots.txt",
+      "https://honeycombtheworldbeyond.wiki/sitemap.xml"
+    ]
+  }
+}

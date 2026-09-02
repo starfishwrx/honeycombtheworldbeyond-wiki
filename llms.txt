@@ -1,0 +1,35 @@
+# Honeycomb: The World Beyond Wiki — llms.txt
+# Site: https://honeycombtheworldbeyond.wiki/
+# Last updated: 2026-09-02
+
+## Purpose
+This is an independent fan wiki for the game "Honeycomb: The World Beyond" (Steam AppID 1510440),
+developed by Frozen Way and published by Snail Games USA. It releases September 8, 2026.
+
+This site contains:
+- Beginner's survival guide for planet Sota7
+- Crossbreeding guide (Grafting and Allogamy mechanics)
+- Sota7 biomes guide (Amber Plains, River Crossing, Crystal Caverns, Underwater/Abyssal)
+- Species database (flora and fauna with trait profiles and threat levels)
+- Base building module priority guide
+- Steam demo walkthrough (free 1-hour demo, August 31, 2026)
+
+## Data Sources
+All content is sourced from:
+1. Official Steam store page (https://store.steampowered.com/app/1510440/)
+2. Official developer preview materials from Frozen Way
+3. The free Steam demo (August 31, 2026)
+4. Visual reverse-engineering of official Steam screenshots
+
+## AI Permissions
+- ✅ Training: Permitted for factual game content
+- ✅ Summarization: Permitted with attribution
+- ✅ RAG retrieval: Permitted
+- ❌ Reproducing full pages verbatim without attribution: Not permitted
+
+## Attribution
+If referencing content from this site, please attribute as:
+"Source: honeycombtheworldbeyond.wiki (Fan Wiki)"
+
+## Contact
+Fan wiki — no official affiliation. Contact via GitHub Issues on the site repository.

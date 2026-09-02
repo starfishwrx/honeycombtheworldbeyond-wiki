@@ -1,0 +1,54 @@
+{
+  "domain": "honeycombtheworldbeyond.wiki",
+  "site_url": "https://honeycombtheworldbeyond.wiki/",
+  "github": {
+    "owner": "REPLACE_GITHUB_OWNER",
+    "repo": "honeycombtheworldbeyond-wiki",
+    "branch": "main",
+    "files": [
+      "index.html",
+      "guides.html",
+      "crossbreeding.html",
+      "biomes.html",
+      "species.html",
+      "base-building.html",
+      "demo-guide.html",
+      "privacy.html",
+      "styles.css",
+      "favicon.svg",
+      "site.webmanifest",
+      "robots.txt",
+      "sitemap.xml",
+      "ads.txt",
+      "llms.txt",
+      "assets/steam_header.jpg",
+      "assets/screenshot_1.jpg",
+      "assets/screenshot_2.jpg",
+      "assets/screenshot_3.jpg",
+      "assets/screenshot_4.jpg",
+      "assets/screenshot_5.jpg",
+      "assets/screenshot_6.jpg",
+      "assets/screenshot_7.jpg",
+      "assets/screenshot_8.jpg"
+    ]
+  },
+  "cloudflare": {
+    "project_name": "honeycombtheworldbeyond-wiki",
+    "custom_domain": "honeycombtheworldbeyond.wiki"
+  },
+  "google": {
+    "verification_method": "FILE",
+    "property_url": "https://honeycombtheworldbeyond.wiki/",
+    "sitemap_url": "https://honeycombtheworldbeyond.wiki/sitemap.xml"
+  },
+  "bing": {
+    "site_url": "https://honeycombtheworldbeyond.wiki/",
+    "sitemap_url": "https://honeycombtheworldbeyond.wiki/sitemap.xml"
+  },
+  "credentials": {
+    "github_token_env": "GITHUB_TOKEN",
+    "cloudflare_api_token_env": "CLOUDFLARE_API_TOKEN",
+    "gsc_access_token_env": "GSC_ACCESS_TOKEN",
+    "bing_access_token_env": "BING_WEBMASTER_ACCESS_TOKEN"
+  }
+}
