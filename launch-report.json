@@ -1,49 +1,75 @@
 {
   "schema_version": "1",
-  "observed_at": "2026-09-03T03:20:00Z",
+  "observed_at": "2026-09-03T17:50:00Z",
   "canonical_url": "https://honeycombtheworldbeyond.wiki/",
   "inventory_snapshot": {
     "hosting_project": "honeycombtheworldbeyond-wiki",
     "authoritative_dns": "cloudflare",
-    "record_types_observed": ["CNAME"]
+    "nameservers": [
+      "brian.ns.cloudflare.com",
+      "jocelyn.ns.cloudflare.com"
+    ],
+    "record_types_observed": [
+      "A",
+      "CNAME"
+    ]
   },
   "changes_applied": [
     "Published verified static build to GitHub repository starfishwrx/honeycombtheworldbeyond-wiki on main branch.",
     "Configured GitHub Pages with custom domain CNAME honeycombtheworldbeyond.wiki.",
     "Generated Google-supported multi-res ICO and PNG favicons (48x48, 192x192).",
-    "Enforced max-image-preview:large and direct-answer elements to pass site-quality contract audit."
+    "Enforced max-image-preview:large and direct-answer elements to pass site-quality contract audit.",
+    "Synchronized 730f21f mobile touch-hover isolation, 75px scroll-padding-top, and cache-busting.",
+    "Configured real publisher pub-1143439996470265 in adsense.json, ads.txt, and 8 HTML meta tags.",
+    "Installed Cloudflare skills and registered Cloudflare MCP servers via official prompt.md."
   ],
   "deploy": {
     "provider": "github-pages",
-    "deployment_id": "commit-main",
-    "provider_url": "https://starfishwrx.github.io/honeycombtheworldbeyond-wiki/"
+    "deployment_id": "commit-bb18d3d",
+    "provider_url": "http://honeycombtheworldbeyond.wiki/"
   },
   "verified_now": [
     {
       "check": "site-contract quality audit",
       "evidence": "python audit_site.py passed all contract and game-native quality gates with zero errors.",
-      "observed_at": "2026-09-03T03:20:00Z"
+      "observed_at": "2026-09-03T15:37:28Z"
     },
     {
       "check": "node verification test suite",
       "evidence": "node tests/verify.mjs passed for all 8 indexable pages and required assets.",
-      "observed_at": "2026-09-03T03:20:00Z"
+      "observed_at": "2026-09-03T15:37:17Z"
     },
     {
-      "check": "github pages deployment",
-      "evidence": "GitHub API confirmed Pages enabled on starfishwrx/honeycombtheworldbeyond-wiki.",
-      "observed_at": "2026-09-03T03:20:00Z"
+      "check": "nameserver delegation",
+      "evidence": "DoH confirmed public NS active on brian.ns.cloudflare.com and jocelyn.ns.cloudflare.com.",
+      "observed_at": "2026-09-03T16:36:07Z"
+    },
+    {
+      "check": "live http homepage",
+      "evidence": "http://honeycombtheworldbeyond.wiki/ returned 200 OK with correct title and full game wiki markup.",
+      "observed_at": "2026-09-03T16:36:28Z"
+    },
+    {
+      "check": "live ads.txt",
+      "evidence": "http://honeycombtheworldbeyond.wiki/ads.txt returned 200 OK with pub-1143439996470265 seller line.",
+      "observed_at": "2026-09-03T16:36:37Z"
+    },
+    {
+      "check": "live robots.txt and sitemap.xml",
+      "evidence": "robots.txt and sitemap.xml returned 200 OK with canonical URL definitions.",
+      "observed_at": "2026-09-03T16:36:37Z"
     }
   ],
   "configured_awaiting_data": [
-    "AdSense ads.txt placeholder ready; waiting for domain live and indexed state before applying via Management API.",
-    "Google Search Console verification file and sitemap ready; waiting for property claim once DNS delegates."
+    "Cloudflare Proxied toggle (Orange Cloud) for instant edge HTTPS, or GitHub Pages Let's Encrypt cert issuance queue.",
+    "AdSense review submission via adsense_ajax.py once live HTTPS is verified.",
+    "Google Search Console initial crawl and index coverage after sitemap submission."
   ],
   "requested_not_guaranteed": [
     "Search indexation and rich thumbnail previews requested via sitemap.xml and JSON-LD image declarations."
   ],
   "blocked": [],
   "rollback_status": "Git commit history preserved on GitHub; local working tree intact.",
-  "current_bottleneck": "Domain DNS delegation on Spaceship to activate honeycombtheworldbeyond.wiki apex host.",
-  "next_check_at": "2026-09-08T00:00:00Z"
+  "current_bottleneck": "Awaiting Cloudflare Edge SSL activation (turning proxy orange cloud on) or GitHub Pages cert completion.",
+  "next_check_at": "2026-09-04T00:00:00Z"
 }
