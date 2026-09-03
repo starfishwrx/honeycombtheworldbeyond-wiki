@@ -1,6 +1,7 @@
 {
-  "schema_version": "1",
-  "observed_at": "2026-09-03T17:50:00Z",
+  "schema_version": "2",
+  "state": "dns_blocked",
+  "observed_at": "2026-09-03T16:15:00Z",
   "canonical_url": "https://honeycombtheworldbeyond.wiki/",
   "inventory_snapshot": {
     "hosting_project": "honeycombtheworldbeyond-wiki",
@@ -14,62 +15,152 @@
       "CNAME"
     ]
   },
+  "provider_preflight": {
+    "status": "pass",
+    "checked_at": "2026-09-03T16:00:00Z",
+    "checks": [
+      {
+        "check": "api-access",
+        "status": "pass",
+        "evidence": "Cloudflare Workers API authenticated under account 15b67a264f002f799bb6b4e805b8d6ed (A358101523@gmail.com)."
+      },
+      {
+        "check": "product-plan-eligibility",
+        "status": "pass",
+        "evidence": "Cloudflare Workers Static Assets accepted bundle upload and allocated resources."
+      },
+      {
+        "check": "hosting-write-permission",
+        "status": "pass",
+        "evidence": "Worker script and 31 static assets uploaded with version ID 1c48d096-efe5-4904-b5de-fdba2c875cc8."
+      }
+    ]
+  },
+  "preview": {
+    "required": true,
+    "status": "pass",
+    "url": "https://honeycombtheworldbeyond-wiki.a358101523.workers.dev/",
+    "http_status": 200,
+    "deployment_id": "1c48d096-efe5-4904-b5de-fdba2c875cc8",
+    "verified_at": "2026-09-03T16:14:49Z"
+  },
+  "permissions": {
+    "status": "fail",
+    "required": [
+      "hosting-read",
+      "hosting-write",
+      "dns-read",
+      "dns-write"
+    ],
+    "observed": [
+      "hosting-read",
+      "hosting-write",
+      "dns-read"
+    ],
+    "checked_at": "2026-09-03T16:01:00Z"
+  },
+  "dns_snapshot": {
+    "captured_at": "2026-09-03T15:58:00Z",
+    "artifact": "launch-dns-snapshot.json",
+    "record_count": 2,
+    "records": [
+      {
+        "type": "CNAME",
+        "name": "honeycombtheworldbeyond.wiki",
+        "value": "starfishwrx.github.io",
+        "ttl": 1,
+        "proxied": false
+      },
+      {
+        "type": "CNAME",
+        "name": "www.honeycombtheworldbeyond.wiki",
+        "value": "honeycombtheworldbeyond.wiki",
+        "ttl": 1,
+        "proxied": false
+      }
+    ]
+  },
   "changes_applied": [
-    "Published verified static build to GitHub repository starfishwrx/honeycombtheworldbeyond-wiki on main branch.",
-    "Configured GitHub Pages with custom domain CNAME honeycombtheworldbeyond.wiki.",
-    "Generated Google-supported multi-res ICO and PNG favicons (48x48, 192x192).",
-    "Enforced max-image-preview:large and direct-answer elements to pass site-quality contract audit.",
-    "Synchronized 730f21f mobile touch-hover isolation, 75px scroll-padding-top, and cache-busting.",
-    "Configured real publisher pub-1143439996470265 in adsense.json, ads.txt, and 8 HTML meta tags.",
-    "Installed Cloudflare skills and registered Cloudflare MCP servers via official prompt.md."
+    "Published verified static build with GA4 analytics (G-03MXLX12W1) and Basic Consent Mode to all 8 HTML pages.",
+    "Integrated Adsterra ad network placement script (adsterra_social_bar_main) and seller lines in ads.txt idempotently.",
+    "Deployed Worker and static assets bundle to Cloudflare Workers preview (https://honeycombtheworldbeyond-wiki.a358101523.workers.dev/).",
+    "Captured pre-deploy DNS inventory snapshot in launch-dns-snapshot.json.",
+    "Created downstream skill adsterra-site-onboarding in game-wiki-growth-skills conforming to meta-skill standards."
   ],
   "deploy": {
-    "provider": "github-pages",
-    "deployment_id": "commit-bb18d3d",
-    "provider_url": "http://honeycombtheworldbeyond.wiki/"
+    "provider": "cloudflare-workers-static-assets",
+    "deployment_id": "1c48d096-efe5-4904-b5de-fdba2c875cc8",
+    "provider_url": "https://honeycombtheworldbeyond-wiki.a358101523.workers.dev/",
+    "status": "active"
+  },
+  "required_now": {
+    "provider_eligible": true,
+    "preview_verified": true,
+    "permissions_verified": false,
+    "dns_snapshot_captured": true,
+    "build_verified": true,
+    "deploy_recorded": true,
+    "canonical_https": false,
+    "alternate_routes": false,
+    "public_dns_tls": false,
+    "canonical_surface": false,
+    "real_404": false,
+    "source_files_private": false,
+    "analytics_consent": true,
+    "search_console_state": false,
+    "googlebot_homepage": false,
+    "googlebot_image": false,
+    "mobile_layout": true
   },
   "verified_now": [
     {
-      "check": "site-contract quality audit",
-      "evidence": "python audit_site.py passed all contract and game-native quality gates with zero errors.",
-      "observed_at": "2026-09-03T15:37:28Z"
+      "check": "provider_eligible",
+      "evidence": "Cloudflare Workers Static Assets accepted the repository project and uploaded assets.",
+      "observed_at": "2026-09-03T16:00:00Z"
     },
     {
-      "check": "node verification test suite",
-      "evidence": "node tests/verify.mjs passed for all 8 indexable pages and required assets.",
-      "observed_at": "2026-09-03T15:37:17Z"
+      "check": "preview_verified",
+      "evidence": "Live preview at https://honeycombtheworldbeyond-wiki.a358101523.workers.dev/ returned HTTP 200 with GA4 tag and Adsterra placement.",
+      "observed_at": "2026-09-03T16:14:52Z"
     },
     {
-      "check": "nameserver delegation",
-      "evidence": "DoH confirmed public NS active on brian.ns.cloudflare.com and jocelyn.ns.cloudflare.com.",
-      "observed_at": "2026-09-03T16:36:07Z"
+      "check": "dns_snapshot_captured",
+      "evidence": "launch-dns-snapshot.json saved the pre-change CNAME record set.",
+      "observed_at": "2026-09-03T15:58:00Z"
     },
     {
-      "check": "live http homepage",
-      "evidence": "http://honeycombtheworldbeyond.wiki/ returned 200 OK with correct title and full game wiki markup.",
-      "observed_at": "2026-09-03T16:36:28Z"
+      "check": "build_verified",
+      "evidence": "python audit_site.py and node tests/verify.mjs passed with zero errors immediately before deployment.",
+      "observed_at": "2026-09-03T16:14:27Z"
     },
     {
-      "check": "live ads.txt",
-      "evidence": "http://honeycombtheworldbeyond.wiki/ads.txt returned 200 OK with pub-1143439996470265 seller line.",
-      "observed_at": "2026-09-03T16:36:37Z"
+      "check": "deploy_recorded",
+      "evidence": "Uploaded Worker version ID 1c48d096-efe5-4904-b5de-fdba2c875cc8 with preview triggers active.",
+      "observed_at": "2026-09-03T16:14:49Z"
     },
     {
-      "check": "live robots.txt and sitemap.xml",
-      "evidence": "robots.txt and sitemap.xml returned 200 OK with canonical URL definitions.",
-      "observed_at": "2026-09-03T16:36:37Z"
+      "check": "analytics_consent",
+      "evidence": "GA4 snippet injected with Basic Consent Mode (analytics_storage granted, anonymize_ip true).",
+      "observed_at": "2026-09-03T16:00:00Z"
+    },
+    {
+      "check": "mobile_layout",
+      "evidence": "adsterra_onboard.py mobile-audit confirmed 100% responsive readiness without overflow.",
+      "observed_at": "2026-09-03T16:14:12Z"
     }
   ],
   "configured_awaiting_data": [
-    "Cloudflare Proxied toggle (Orange Cloud) for instant edge HTTPS, or GitHub Pages Let's Encrypt cert issuance queue.",
-    "AdSense review submission via adsense_ajax.py once live HTTPS is verified.",
-    "Google Search Console initial crawl and index coverage after sitemap submission."
+    "Adsterra ad network account review status transition to Active.",
+    "Google Analytics 4 consenting session observations.",
+    "Google Search Console initial search performance and impressions."
   ],
   "requested_not_guaranteed": [
-    "Search indexation and rich thumbnail previews requested via sitemap.xml and JSON-LD image declarations."
+    "Search indexation and Adsterra revenue performance are subject to external traffic and network review."
   ],
-  "blocked": [],
-  "rollback_status": "Git commit history preserved on GitHub; local working tree intact.",
-  "current_bottleneck": "Awaiting Cloudflare Edge SSL activation (turning proxy orange cloud on) or GitHub Pages cert completion.",
-  "next_check_at": "2026-09-04T00:00:00Z"
+  "blocked": [
+    "Cloudflare Custom Domain attachment is blocked because honeycombtheworldbeyond.wiki has an externally managed CNAME in Cloudflare DNS (Code: 100117)."
+  ],
+  "rollback_status": "DNS pre-change state preserved in launch-dns-snapshot.json; git history preserved on main branch.",
+  "current_bottleneck": "Cloudflare API returned error 100117: Hostname 'honeycombtheworldbeyond.wiki' already has externally managed DNS records. Legacy CNAME record pointing to starfishwrx.github.io must be deleted from Cloudflare DNS (or CLOUDFLARE_API_TOKEN with Zone.DNS:Edit provided) before Workers Custom Domain can route the apex.",
+  "next_check_at": "2026-09-04T02:00:00Z"
 }

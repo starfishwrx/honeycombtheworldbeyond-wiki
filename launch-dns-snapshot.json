@@ -1,0 +1,20 @@
+{
+  "domain": "honeycombtheworldbeyond.wiki",
+  "captured_at": "2026-09-03T18:00:00Z",
+  "records": [
+    {
+      "type": "CNAME",
+      "name": "honeycombtheworldbeyond.wiki",
+      "value": "starfishwrx.github.io",
+      "ttl": 1,
+      "proxied": false
+    },
+    {
+      "type": "CNAME",
+      "name": "www.honeycombtheworldbeyond.wiki",
+      "value": "honeycombtheworldbeyond.wiki",
+      "ttl": 1,
+      "proxied": false
+    }
+  ]
+}

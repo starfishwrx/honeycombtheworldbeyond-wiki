@@ -14,9 +14,7 @@ def build():
         'species.html', 'base-building.html', 'demo-guide.html', 'privacy.html',
         '404.html', 'styles.css', 'robots.txt', 'sitemap.xml', 'llms.txt',
         'ads.txt', 'favicon.ico', 'favicon.svg', 'icon-48.png', 'icon-192.png',
-        'apple-touch-icon.png', 'site.webmanifest', 'CNAME',
-        '_headers', '_redirects', 'site-contract.json', 'opportunity.json',
-        'launch-profile.json', 'launch-report.json', 'EVIDENCE.md', 'wrangler.jsonc'
+        'apple-touch-icon.png', 'site.webmanifest', '_headers'
     ]
 
     for item in files:

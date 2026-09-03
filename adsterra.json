@@ -1,0 +1,29 @@
+{
+  "site_url": "https://honeycombtheworldbeyond.wiki/",
+  "domain": "honeycombtheworldbeyond.wiki",
+  "source_root": ".",
+  "html_files": [
+    "index.html",
+    "guides.html",
+    "crossbreeding.html",
+    "biomes.html",
+    "species.html",
+    "base-building.html",
+    "demo-guide.html",
+    "privacy.html"
+  ],
+  "ads_txt": "ads.txt",
+  "ad_placement": {
+    "type": "social-bar",
+    "placement_id": "adsterra_social_bar_main",
+    "script_url": "//pl24318910.profitablecpmrate.com/65/6e/e2/656ee253f86e902b7405273b0a7b458b.js",
+    "position": "body-end"
+  },
+  "seller_lines": [
+    "adsterra.com, 24318910, DIRECT, f08c47fec0942fa0"
+  ],
+  "api": {
+    "api_key_env": "ADSTERRA_API_KEY",
+    "base_url": "https://api3.adsterratools.com/publisher"
+  }
+}

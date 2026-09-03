@@ -1,18 +1,18 @@
 {
-  "schema_version": "1",
+  "schema_version": "2",
   "provider_guidance_checked_at": "2026-09-03",
   "provider_guidance_sources": [
-    "https://developers.cloudflare.com/pages/",
-    "https://docs.github.com/en/pages"
+    "https://developers.cloudflare.com/workers/static-assets/",
+    "https://developers.cloudflare.com/pages/"
   ],
   "site": {
     "project_root": ".",
-    "build_command": "node tests/verify.mjs",
+    "build_command": "python build_public.py",
     "test_command": "node tests/verify.mjs",
-    "build_output": "."
+    "build_output": "dist"
   },
   "hosting": {
-    "provider": "github-pages",
+    "provider": "cloudflare-workers-static-assets",
     "project_name": "honeycombtheworldbeyond-wiki",
     "existing_project": true
   },
@@ -21,7 +21,8 @@
     "apex": "honeycombtheworldbeyond.wiki",
     "canonical_host": "honeycombtheworldbeyond.wiki",
     "authoritative_dns": "cloudflare",
-    "apex_strategy": "canonical-apex"
+    "apex_strategy": "canonical-apex",
+    "dns_change_required": false
   },
   "search": {
     "provider": "google-search-console",
@@ -34,20 +35,57 @@
     "consent_mode": "basic"
   },
   "credentials": {
-    "github_token": "env:GITHUB_TOKEN",
-    "cloudflare_api_token": "env:CLOUDFLARE_API_TOKEN",
-    "spaceship_api_key": "env:SPACESHIP_API_KEY",
-    "spaceship_api_secret": "env:SPACESHIP_API_SECRET"
+    "cloudflare_api_token": "env:CLOUDFLARE_API_TOKEN"
+  },
+  "gates": {
+    "provider_eligibility": {
+      "required_checks": [
+        "api-access",
+        "product-plan-eligibility",
+        "hosting-write-permission"
+      ]
+    },
+    "preview": {
+      "required": true,
+      "expected_status_codes": [200]
+    },
+    "dns": {
+      "snapshot_path": "launch-dns-snapshot.json",
+      "required_permissions": ["dns-read"],
+      "conflict_policy": "replace-exact-host-records-only",
+      "preserve_record_types": ["MX", "TXT"]
+    },
+    "production": {
+      "required_checks": [
+        "provider_eligible",
+        "preview_verified",
+        "permissions_verified",
+        "dns_snapshot_captured",
+        "build_verified",
+        "deploy_recorded",
+        "canonical_https",
+        "alternate_routes",
+        "public_dns_tls",
+        "canonical_surface",
+        "real_404",
+        "source_files_private",
+        "analytics_consent",
+        "search_console_state",
+        "googlebot_homepage",
+        "googlebot_image",
+        "mobile_layout"
+      ]
+    }
   },
   "change_plan": [
-    "Verify local site quality with audit_site.py and verify.mjs.",
-    "Publish atomic single-tree commit to GitHub main branch.",
-    "Enable and route Pages hosting to custom apex domain honeycombtheworldbeyond.wiki.",
+    "Verify local site quality with the project tests and current game-wiki-growth-skills audit.",
+    "Build a public-only dist directory without source contracts or local reports.",
+    "Deploy Cloudflare Workers Static Assets and attach apex and www custom domains.",
     "Submit sitemap to Google Search Console and Bing Webmaster Tools once public DNS propagates."
   ],
   "rollback_plan": [
-    "Reset main branch ref on GitHub to previous verified commit if build fails.",
-    "Preserve original registrar NS and DNS records snapshot before applying custom NS changes."
+    "Roll back the Cloudflare Worker to the previous deployment version if verification fails.",
+    "Restore the prior GitHub Pages DNS records from the pre-deploy inventory if custom-domain routing fails."
   ],
   "authorized_actions": [
     "create-hosting-project",

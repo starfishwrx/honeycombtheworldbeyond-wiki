@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/verify.mjs",
-    "serve": "node server.mjs"
+    "build": "python build_public.py",
+    "test": "node tests/verify.mjs && python build_public.py && node tests/verify-dist.mjs",
+    "serve": "node server.mjs",
+    "deploy": "npx --yes wrangler@4.86.0 deploy"
   }
 }
