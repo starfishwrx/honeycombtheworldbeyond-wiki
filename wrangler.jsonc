@@ -13,5 +13,15 @@
     "run_worker_first": true,
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "honeycombtheworldbeyond.wiki",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.honeycombtheworldbeyond.wiki",
+      "custom_domain": true
+    }
+  ]
 }
