@@ -1,68 +1,105 @@
 {
+  "schema_version": "1",
+  "canonical_base": "https://honeycombtheworldbeyond.wiki/",
+  "build_output": ".",
+  "evidence_register": "EVIDENCE.md",
   "domain": "honeycombtheworldbeyond.wiki",
-  "checked_at": "2026-09-02T12:00:00Z",
-  "seo_requirements": {
-    "index_html": {
-      "has_title": true,
-      "title_contains_keyword": true,
-      "has_meta_description": true,
-      "description_length_ok": true,
-      "has_canonical": true,
-      "has_og_tags": true,
-      "has_twitter_card": true,
-      "has_json_ld_website": true,
-      "has_json_ld_videogame": true,
-      "has_json_ld_faq": true,
-      "has_json_ld_breadcrumb": true,
-      "has_h1": true,
-      "h1_contains_keyword": true,
-      "has_screenshot_gallery": true,
-      "has_steam_cta": true,
-      "has_footer_attribution": true
+  "checked_at": "2026-09-03T03:00:00Z",
+  "measurement": {
+    "hypothesis": "A direct first-run path will earn search clicks and guide players through Sota7 survival and bioengineering crossbreeding.",
+    "primary_signal": "beginner_survival_guide_completion",
+    "guardrail": "direct answers remain visible before analytics or advertising UI"
+  },
+  "analytics": {
+    "enabled": true,
+    "consent_required": true
+  },
+  "pages": [
+    {
+      "path": "index.html",
+      "role": "home",
+      "intent": "honeycomb the world beyond wiki",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 100,
+      "source_ids": ["steam-official-1510440"]
     },
-    "inner_pages": {
-      "guides_html": { "has_howto_schema": true, "has_breadcrumb": true },
-      "crossbreeding_html": { "has_breadcrumb": true, "has_breed_diagram": true },
-      "biomes_html": { "has_breadcrumb": true, "has_biome_table": true },
-      "species_html": { "has_breadcrumb": true, "has_species_table": true },
-      "base_building_html": { "has_breadcrumb": true, "has_priority_table": true },
-      "demo_guide_html": { "has_breadcrumb": true }
+    {
+      "path": "guides.html",
+      "role": "guide",
+      "intent": "honeycomb the world beyond beginner survival guide",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 95,
+      "source_ids": ["steam-official-1510440", "demo-firsthand-20260831"]
     },
-    "supporting_files": {
-      "robots_txt": true,
-      "sitemap_xml": true,
-      "ads_txt": true,
-      "llms_txt": true,
-      "site_webmanifest": true,
-      "favicon_svg": true,
-      "privacy_html": true
+    {
+      "path": "crossbreeding.html",
+      "role": "guide",
+      "intent": "honeycomb the world beyond crossbreeding grafting allogamy guide",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 95,
+      "source_ids": ["steam-official-1510440", "developer-interview"]
     },
-    "content_intents_covered": {
-      "beginner_survival_guide": true,
-      "crossbreeding_grafting_allogamy": true,
-      "sota7_biomes": true,
-      "species_database": true,
-      "base_building": true,
-      "demo_walkthrough": true,
-      "hunger_thirst_health_survival_mechanics": true,
-      "eon_corp_story_guide": "partial"
+    {
+      "path": "biomes.html",
+      "role": "database",
+      "intent": "honeycomb the world beyond sota7 biomes list",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 90,
+      "source_ids": ["steam-official-1510440"]
     },
-    "design_tokens_extracted": {
-      "from_screenshots": true,
-      "color_bg": "#091c18",
-      "color_brand": "#4ecdc4",
-      "color_accent": "#f7d060",
-      "color_bio": "#8b5cf6",
-      "ui_components_reversed": ["scan-tooltip", "hud-stat-bars", "hotbar-circle", "compass-arc"]
+    {
+      "path": "species.html",
+      "role": "database",
+      "intent": "honeycomb the world beyond alien species flora fauna traits",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 90,
+      "source_ids": ["steam-official-1510440", "demo-firsthand-20260831"]
+    },
+    {
+      "path": "base-building.html",
+      "role": "guide",
+      "intent": "honeycomb the world beyond base building module priority",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 85,
+      "source_ids": ["steam-official-1510440"]
+    },
+    {
+      "path": "demo-guide.html",
+      "role": "walkthrough",
+      "intent": "honeycomb the world beyond demo walkthrough",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 85,
+      "source_ids": ["demo-firsthand-20260831"]
+    },
+    {
+      "path": "privacy.html",
+      "role": "policy",
+      "intent": "privacy policy",
+      "indexable": true,
+      "first_session": false,
+      "priority_score": 50,
+      "source_ids": []
     }
-  },
-  "deployment_requirements": {
-    "github_repo_created": false,
-    "cloudflare_pages_deployed": false,
-    "custom_domain_configured": false,
-    "gsc_submitted": false,
-    "bing_submitted": false,
-    "adsense_applied": false
-  },
-  "notes": "Pre-launch state. Full species names and trait values to be updated post Sep 8, 2026 launch. Deployment requires user action for domain DNS, GitHub repo, and GSC/Bing verification."
+  ],
+  "seo_requirements": {
+    "has_title": true,
+    "has_meta_description": true,
+    "has_canonical": true,
+    "has_og_tags": true,
+    "has_twitter_card": true,
+    "has_json_ld": true,
+    "has_robots_txt": true,
+    "has_sitemap_xml": true,
+    "has_google_supported_favicons": true,
+    "has_ad_wrapper": true,
+    "has_sticky_toc": true,
+    "has_direct_answer": true
+  }
 }

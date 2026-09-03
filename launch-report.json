@@ -1,0 +1,49 @@
+{
+  "schema_version": "1",
+  "observed_at": "2026-09-03T03:20:00Z",
+  "canonical_url": "https://honeycombtheworldbeyond.wiki/",
+  "inventory_snapshot": {
+    "hosting_project": "honeycombtheworldbeyond-wiki",
+    "authoritative_dns": "cloudflare",
+    "record_types_observed": ["CNAME"]
+  },
+  "changes_applied": [
+    "Published verified static build to GitHub repository starfishwrx/honeycombtheworldbeyond-wiki on main branch.",
+    "Configured GitHub Pages with custom domain CNAME honeycombtheworldbeyond.wiki.",
+    "Generated Google-supported multi-res ICO and PNG favicons (48x48, 192x192).",
+    "Enforced max-image-preview:large and direct-answer elements to pass site-quality contract audit."
+  ],
+  "deploy": {
+    "provider": "github-pages",
+    "deployment_id": "commit-main",
+    "provider_url": "https://starfishwrx.github.io/honeycombtheworldbeyond-wiki/"
+  },
+  "verified_now": [
+    {
+      "check": "site-contract quality audit",
+      "evidence": "python audit_site.py passed all contract and game-native quality gates with zero errors.",
+      "observed_at": "2026-09-03T03:20:00Z"
+    },
+    {
+      "check": "node verification test suite",
+      "evidence": "node tests/verify.mjs passed for all 8 indexable pages and required assets.",
+      "observed_at": "2026-09-03T03:20:00Z"
+    },
+    {
+      "check": "github pages deployment",
+      "evidence": "GitHub API confirmed Pages enabled on starfishwrx/honeycombtheworldbeyond-wiki.",
+      "observed_at": "2026-09-03T03:20:00Z"
+    }
+  ],
+  "configured_awaiting_data": [
+    "AdSense ads.txt placeholder ready; waiting for domain live and indexed state before applying via Management API.",
+    "Google Search Console verification file and sitemap ready; waiting for property claim once DNS delegates."
+  ],
+  "requested_not_guaranteed": [
+    "Search indexation and rich thumbnail previews requested via sitemap.xml and JSON-LD image declarations."
+  ],
+  "blocked": [],
+  "rollback_status": "Git commit history preserved on GitHub; local working tree intact.",
+  "current_bottleneck": "Domain DNS delegation on Spaceship to activate honeycombtheworldbeyond.wiki apex host.",
+  "next_check_at": "2026-09-08T00:00:00Z"
+}

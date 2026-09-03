@@ -1,47 +1,51 @@
 {
-  "keyword": "honeycomb the world beyond",
+  "schema_version": "1",
+  "candidate_term": "honeycomb the world beyond",
+  "canonical_game_name": "Honeycomb: The World Beyond",
+  "entity_type": "game",
+  "observed_at": "2026-09-02",
+  "markets": ["worldwide"],
+  "languages": ["en"],
+  "signal": {
+    "window": "last 7 days",
+    "evidence_urls": [
+      "https://store.steampowered.com/app/1510440/Honeycomb_The_World_Beyond/",
+      "https://steamcommunity.com/app/1510440/",
+      "https://honeycomb-game.com/"
+    ],
+    "summary": "Steam demo released on August 31, 2026. Full game launching on September 8, 2026. High search acceleration for bioengineering, crossbreeding, and Sota7 survival mechanics."
+  },
+  "competition": {
+    "exact_match_domains": ["honeycombgame.wiki"],
+    "observed_gaps": [
+      "Existing competitor has sparse pre-launch stubs.",
+      "No crossbreeding calculator or trait inheritance tree.",
+      "No Sota7 biome breakdown with hazards and resources.",
+      "No demo walkthrough covering the first 60 minutes."
+    ],
+    "checked_at": "2026-09-02"
+  },
+  "official_sources": [
+    "https://store.steampowered.com/app/1510440/Honeycomb_The_World_Beyond/",
+    "https://honeycomb-game.com/"
+  ],
+  "decision": "build",
+  "confidence": "high",
+  "rationale": "High search interest ahead of September 8 launch. First-hand demo playable. Serious intent gaps in current SERP.",
+  "current_bottleneck_hypothesis": "Players need immediate, verified guidance on Sota7 survival and crossbreeding combinations.",
+  "first_measurement": "Track organic impressions, survival guide reads, and crossbreeding guide engagement within the first 14 days of launch.",
   "domain": "honeycombtheworldbeyond.wiki",
-  "game_name": "Honeycomb: The World Beyond",
   "steam_appid": "1510440",
   "developer": "Frozen Way",
   "publisher": "Snail Games USA",
   "status": "GO_NOW",
-  "checked_at": "2026-09-02T11:50:00Z",
-  "observed_signals": {
-    "steam_review_count": 0,
-    "demo_available": true,
-    "demo_released": "2026-08-31",
-    "launch_date": "2026-09-08",
-    "days_to_launch": 6,
-    "platforms": ["PC (Steam)", "PS5", "Xbox Series X/S"],
-    "genre": ["Sci-fi Survival", "Sandbox", "Base Building", "Bioengineering"],
-    "honeycombgame_wiki_competitor": true,
-    "competitor_domain": "honeycombgame.wiki",
-    "competitor_gap": "honeycombgame.wiki has sparse pre-launch content; no crossbreeding calculator, no biome guides, no demo walkthrough"
-  },
-  "serp_saturation": {
-    "niche_wiki_count": 1,
-    "authority_coverage_ratio": "20%",
-    "gap_opportunity": "No crossbreeding calculator, no Sota7 biome-by-biome guide, no demo walkthrough, no species database with traits. Primary competitor (honeycombgame.wiki) has only skeletons. Window is right before launch (Sep 8)."
-  },
   "design_tokens": {
-    "color_bg": "#0a1f1a",
-    "color_surface": "#1a3330",
+    "color_bg": "#091c18",
+    "color_surface": "#122820",
     "color_brand": "#4ecdc4",
     "color_accent": "#f7d060",
     "color_bio": "#8b5cf6",
     "color_nature": "#4a9e5c",
-    "color_danger": "#ef4444",
-    "ui_motif": "Biopunk lab console with hexagonal accents, scanning holograms, and alien-vegetation textures"
-  },
-  "first_session_intents": [
-    "honeycomb the world beyond beginner guide how to survive first hour",
-    "honeycomb the world beyond crossbreeding guide grafting vs allogamy",
-    "honeycomb the world beyond Sota7 biomes list amber plains guide",
-    "honeycomb the world beyond species list alien fauna traits",
-    "honeycomb the world beyond base building tips lab module",
-    "honeycomb the world beyond demo walkthrough what to do first",
-    "honeycomb the world beyond hunger thirst health survival mechanics",
-    "honeycomb the world beyond EON Corp story mission guide"
-  ]
+    "color_danger": "#ef4444"
+  }
 }

@@ -1,0 +1,10 @@
+{
+  "name": "honeycombtheworldbeyond-wiki",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/verify.mjs",
+    "serve": "node server.mjs"
+  }
+}

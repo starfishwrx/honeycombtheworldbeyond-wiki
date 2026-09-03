@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Honeycomb: The World Beyond Wiki — Guides, Crossbreeding & Biome Database</title>
-  <meta name="description" content="The complete Honeycomb: The World Beyond wiki. Beginner survival guide, crossbreeding calculator, Sota7 biome map, species database, and base-building tips for the alien sci-fi survival game.">
+  <title>Honeycomb: The World Beyond Wiki — Sota7 Guides &amp; Database</title>
+  <meta name="description" content="The Honeycomb: The World Beyond wiki. Beginner survival guide, crossbreeding database, Sota7 biome maps, species index, and base-building tips.">
   <meta name="keywords" content="honeycomb the world beyond wiki, honeycomb game guide, crossbreeding grafting allogamy, Sota7 biomes, species database, survival tips, base building, Hennessy bioengineer">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://honeycombtheworldbeyond.wiki/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Honeycomb: The World Beyond Wiki — Survival Guides & Crossbreeding Database">
+  <meta property="og:title" content="Honeycomb: The World Beyond Wiki — Sota7 Guides &amp; Database">
   <meta property="og:description" content="Complete wiki for Honeycomb: The World Beyond. Biome guides, species database, crossbreeding tips, base-building, and the full survival walkthrough for Sota7.">
   <meta property="og:image" content="https://honeycombtheworldbeyond.wiki/assets/steam_header.jpg">
   <meta property="og:url" content="https://honeycombtheworldbeyond.wiki/">
@@ -22,9 +23,12 @@
   <meta name="twitter:description" content="Complete Sota7 survival guide, crossbreeding database, and biome maps.">
   <meta name="twitter:image" content="https://honeycombtheworldbeyond.wiki/assets/steam_header.jpg">
 
-  <!-- Favicon placeholder -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Favicon links (Google-supported PNG/ICO + SVG) -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/icon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
   <!-- JSON-LD Schemas -->
@@ -34,6 +38,7 @@
     "@type": "WebSite",
     "name": "Honeycomb: The World Beyond Wiki",
     "url": "https://honeycombtheworldbeyond.wiki/",
+    "image": "https://honeycombtheworldbeyond.wiki/assets/steam_header.jpg",
     "description": "Complete fan wiki for Honeycomb: The World Beyond — survival guides, crossbreeding database, biome maps, and species index for the alien planet Sota7.",
     "potentialAction": {
       "@type": "SearchAction",
@@ -47,6 +52,7 @@
     "@context": "https://schema.org",
     "@type": "VideoGame",
     "name": "Honeycomb: The World Beyond",
+    "image": "https://honeycombtheworldbeyond.wiki/assets/steam_header.jpg",
     "description": "A sci-fi survival sandbox game where you play as Hennessy, a bioengineer on the alien planet Sota7. Explore biomes, crossbreed alien species, build a base, and uncover the planet's mysteries.",
     "genre": ["Survival", "Sandbox", "Science Fiction", "Adventure"],
     "gamePlatform": ["PC", "PlayStation 5", "Xbox Series X/S"],
@@ -159,7 +165,7 @@
 <!-- ===== DIRECT ANSWER BOX ===== -->
 <section class="answer-box-section">
   <div class="container">
-    <div class="answer-box">
+    <div class="answer-box" data-role="direct-answer">
       <div class="answer-icon">🧬</div>
       <div class="answer-content">
         <h2>What is Honeycomb: The World Beyond?</h2>
@@ -172,11 +178,27 @@
         </div>
       </div>
     </div>
+
+    <!-- Quick Table of Contents -->
+    <nav class="toc" id="toc" aria-label="Page Table of Contents" style="margin: 1.5rem 0; padding: 1rem 1.5rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md);">
+      <span style="font-weight: 700; color: var(--color-brand); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Table of Contents</span>
+      <ul style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem;">
+        <li><a href="#wiki-contents">Wiki Contents</a></li>
+        <li><a href="#gallery">Planet Sota7 Gallery</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <li><a href="#steam-overview">Game Overview &amp; Steam</a></li>
+      </ul>
+    </nav>
+
+    <!-- Ad Placement Wrapper -->
+    <div class="ad-container ad-banner" style="min-width: 0; overflow: visible; margin: 1.5rem 0; text-align: center;">
+      <!-- Google AdSense responsive unit placeholder -->
+    </div>
   </div>
 </section>
 
 <!-- ===== QUICK NAV CARDS ===== -->
-<section class="quick-nav-section">
+<section class="quick-nav-section" id="wiki-contents">
   <div class="container">
     <h2 class="section-title">Wiki Contents</h2>
     <div class="card-grid">
@@ -240,7 +262,7 @@
 </section>
 
 <!-- ===== SCREENSHOT GALLERY ===== -->
-<section class="gallery-section">
+<section class="gallery-section" id="gallery">
   <div class="container">
     <h2 class="section-title">Planet Sota7 — Visual Gallery</h2>
     <p class="section-sub">Official gameplay screenshots from Frozen Way</p>
@@ -282,7 +304,7 @@
 </section>
 
 <!-- ===== FAQ SECTION ===== -->
-<section class="faq-section">
+<section class="faq-section" id="faq">
   <div class="container">
     <h2 class="section-title">Frequently Asked Questions</h2>
     <div class="faq-grid">
@@ -322,7 +344,7 @@
 </section>
 
 <!-- ===== STEAM CTA ===== -->
-<section class="steam-cta-section">
+<section class="steam-cta-section" id="steam-overview">
   <div class="container">
     <div class="steam-cta">
       <img src="assets/steam_header.jpg" alt="Honeycomb: The World Beyond — official key art" class="steam-cta-img">
