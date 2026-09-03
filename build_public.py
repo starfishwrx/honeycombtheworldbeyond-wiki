@@ -16,7 +16,7 @@ def build():
         'ads.txt', 'favicon.ico', 'favicon.svg', 'icon-48.png', 'icon-192.png',
         'apple-touch-icon.png', 'site.webmanifest', 'CNAME',
         '_headers', '_redirects', 'site-contract.json', 'opportunity.json',
-        'launch-profile.json', 'launch-report.json', 'EVIDENCE.md'
+        'launch-profile.json', 'launch-report.json', 'EVIDENCE.md', 'wrangler.jsonc'
     ]
 
     for item in files:
