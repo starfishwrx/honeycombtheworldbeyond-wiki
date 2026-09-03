@@ -1,0 +1,29 @@
+{
+  "site_url": "https://honeycombtheworldbeyond.wiki/",
+  "publisher_id": "pub-1143439996470265",
+  "head_methods": ["meta"],
+  "source_root": ".",
+  "html_files": [
+    "index.html",
+    "guides.html",
+    "crossbreeding.html",
+    "biomes.html",
+    "species.html",
+    "base-building.html",
+    "demo-guide.html",
+    "privacy.html"
+  ],
+  "ads_txt": "ads.txt",
+  "mobile_ads": {
+    "mode": "auto"
+  },
+  "api": {
+    "access_token_env": "ADSENSE_ACCESS_TOKEN",
+    "account_name": "accounts/pub-1143439996470265",
+    "oauth": {
+      "client_id_env": "GOOGLE_OAUTH_CLIENT_ID",
+      "client_secret_env": "GOOGLE_OAUTH_CLIENT_SECRET",
+      "refresh_token_env": "GOOGLE_ADSENSE_REFRESH_TOKEN"
+    }
+  }
+}

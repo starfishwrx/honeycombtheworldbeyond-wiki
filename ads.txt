@@ -1,1 +1,2 @@
 google.com, pub-REPLACE_WITH_PUBLISHER_ID, DIRECT, f08c47fec0942fa0
+google.com, pub-1143439996470265, DIRECT, f08c47fec0942fa0

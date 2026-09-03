@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="google-adsense-account" content="ca-pub-1143439996470265">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beginner's Survival Guide — Honeycomb: The World Beyond Wiki</title>
@@ -10,7 +11,7 @@
   <meta property="og:description" content="First-hour survival guide for Honeycomb: The World Beyond. Amber Plains base setup, stat management, and first research steps on Sota7.">
   <meta property="og:image" content="https://honeycombtheworldbeyond.wiki/assets/steam_header.jpg">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260903-1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,7 +42,7 @@
       <li><a href="species.html">Species</a></li>
       <li><a href="base-building.html">Base Building</a></li>
     </ul>
-    <button class="nav-hamburger" aria-label="Menu">☰</button>
+    <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">☰</button>
   </nav>
 </header>
 
@@ -176,5 +177,22 @@
   </div>
 </footer>
 <script>document.querySelector('.nav-hamburger')?.addEventListener('click',()=>{document.querySelector('.nav-links')?.classList.toggle('open')});</script>
+<script>
+// Mobile nav toggle & auto-close on link click
+const hamburger = document.querySelector('.nav-hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.addEventListener('click', (e) => {
+    if (e.target.closest('a')) {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+</script>
 </body>
 </html>

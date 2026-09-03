@@ -1,35 +1,45 @@
 {
   "domain": "honeycombtheworldbeyond.wiki",
-  "registrar": "spaceship",
-  "cloudflare_zone": "honeycombtheworldbeyond.wiki",
-  "pages_project": "honeycombtheworldbeyond-wiki",
-  "target_records": [
-    {
-      "type": "CNAME",
-      "name": "honeycombtheworldbeyond.wiki",
-      "content": "honeycombtheworldbeyond-wiki.pages.dev",
-      "proxied": true
-    },
-    {
-      "type": "CNAME",
-      "name": "www",
-      "content": "honeycombtheworldbeyond-wiki.pages.dev",
-      "proxied": true
-    }
-  ],
-  "credentials": {
-    "spaceship_api_key_env": "SPACESHIP_API_KEY",
-    "spaceship_api_secret_env": "SPACESHIP_API_SECRET",
-    "cloudflare_api_token_env": "CLOUDFLARE_API_TOKEN"
+  "registrar": {
+    "provider": "spaceship",
+    "base_url": "https://spaceship.dev/api/v1",
+    "api_key_env": "SPACESHIP_API_KEY",
+    "api_secret_env": "SPACESHIP_API_SECRET"
   },
-  "state_file": "domain-state.json",
+  "cloudflare": {
+    "base_url": "https://api.cloudflare.com/client/v4",
+    "api_token_env": "CLOUDFLARE_API_TOKEN",
+    "account_id": "ACCOUNT_ID",
+    "zone_id": null,
+    "create_zone_if_missing": true,
+    "records": [
+      {
+        "type": "CNAME",
+        "name": "honeycombtheworldbeyond.wiki",
+        "content": "starfishwrx.github.io",
+        "proxied": false,
+        "ttl": 1
+      },
+      {
+        "type": "CNAME",
+        "name": "www",
+        "content": "honeycombtheworldbeyond.wiki",
+        "proxied": false,
+        "ttl": 1
+      }
+    ],
+    "pages": {
+      "project_name": "honeycombtheworldbeyond-wiki",
+      "domain": "honeycombtheworldbeyond.wiki"
+    }
+  },
   "verify": {
-    "expected_ns_contains": ["cloudflare"],
-    "expected_https_status": [200],
-    "check_urls": [
-      "https://honeycombtheworldbeyond.wiki/",
-      "https://honeycombtheworldbeyond.wiki/robots.txt",
-      "https://honeycombtheworldbeyond.wiki/sitemap.xml"
+    "urls": [
+      {
+        "url": "https://honeycombtheworldbeyond.wiki/",
+        "allowed_status": [200]
+      }
     ]
-  }
+  },
+  "state_file": "domain-state.json"
 }

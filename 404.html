@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex, follow">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="48x48" href="/icon-48.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260903-1">
 </head>
 <body>
 <header class="site-header">
@@ -40,5 +40,22 @@
     </div>
   </div>
 </footer>
+<script>
+// Mobile nav toggle & auto-close on link click
+const hamburger = document.querySelector('.nav-hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.addEventListener('click', (e) => {
+    if (e.target.closest('a')) {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+</script>
 </body>
 </html>
