@@ -102,7 +102,114 @@
       </div>
     </div>
 
-    <p>Note the <strong>emergent trait</strong> (Drought resistant) — hybrid combinations sometimes produce traits that neither parent had individually. Discovering these emergent properties is a key part of the game's research loop.</p>
+    <!-- Interactive Crossbreeding Matrix Simulator -->
+    <div class="hud-panel" style="margin-top: 2.5rem; background: rgba(16, 32, 28, 0.85); border: 1px solid rgba(45, 212, 191, 0.3); border-radius: 12px; padding: 25px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(45, 212, 191, 0.2); padding-bottom: 12px; margin-bottom: 20px;">
+        <h3 style="color: #2dd4bf; margin: 0; font-size: 1.3rem;">🔬 Sota7 Crossbreeding &amp; Grafting Simulator</h3>
+        <span style="font-size: 0.75rem; background: rgba(45, 212, 191, 0.15); color: #2dd4bf; padding: 3px 8px; border-radius: 4px; font-weight: bold;">LAB BENCH V1.0</span>
+      </div>
+      <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">
+        Select two base flora/fauna specimens and your synthesis methodology to predict the resulting hybrid's emergent traits and utility score before expending lab reagents.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 20px;">
+        <div>
+          <label style="display: block; font-size: 0.85rem; color: #facc15; margin-bottom: 6px; font-weight: bold;">Primary Specimen (Parent A)</label>
+          <select id="specimenA" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; color: #f8fafc; font-size: 0.9rem;">
+            <option value="amber_stalk">🌿 Amber Stalk (Drought Roots)</option>
+            <option value="crystal_bloom">🌸 Crystal Bloom (High Calorie)</option>
+            <option value="river_reed">🌾 Orange River Reed (Toxin Filter)</option>
+            <option value="spikeweed">🌵 Toxic Spikeweed (Thorn Armor)</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.85rem; color: #facc15; margin-bottom: 6px; font-weight: bold;">Secondary Specimen (Parent B)</label>
+          <select id="specimenB" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; color: #f8fafc; font-size: 0.9rem;">
+            <option value="crystal_urchin">💠 Crystalline Urchin (Bioluminescent)</option>
+            <option value="amber_stalk">🌿 Amber Stalk (Drought Roots)</option>
+            <option value="river_reed">🌾 Orange River Reed (Toxin Filter)</option>
+            <option value="pig_seal">🦭 Docile Plains Seal (Fiber Secretion)</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.85rem; color: #2dd4bf; margin-bottom: 6px; font-weight: bold;">Synthesis Technique</label>
+          <select id="breedMethod" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; color: #f8fafc; font-size: 0.9rem;">
+            <option value="grafting">Grafting (Structural Morphology)</option>
+            <option value="allogamy">Allogamy (Metabolic / Chemistry)</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 20px;">
+        <button type="button" id="calcBreedBtn" style="background: #2dd4bf; color: #042f2e; font-weight: bold; border: none; padding: 12px 28px; border-radius: 6px; cursor: pointer; font-size: 0.95rem; transition: background 0.2s;">
+          ⚡ Run Lab Bio-Synthesis Simulation
+        </button>
+      </div>
+
+      <!-- Simulation Result Card -->
+      <div id="breedResultCard" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(45, 212, 191, 0.4); border-radius: 8px; padding: 18px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <h4 id="hybridTitle" style="color: #38bdf8; margin: 0; font-size: 1.1rem;">✨ Amber Crystal Chimeric Specimen</h4>
+          <span id="compatBadge" style="background: #166534; color: #4ade80; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; font-weight: bold;">COMPATIBLE (98%)</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; font-size: 0.88rem; color: #cbd5e1;">
+          <div><strong>Inherited Trait:</strong> <span id="inheritedTrait">Deep Hydration Roots</span></div>
+          <div><strong>Chemical Profile:</strong> <span id="chemicalProfile">Nighttime Phosphorescence</span></div>
+          <div><strong>Emergent Perk:</strong> <span id="emergentPerk" style="color: #facc15; font-weight: bold;">+35% Ambient Water Condensation</span></div>
+          <div><strong>Recommended Soil:</strong> <span id="soilReq">Silica Sand + Crystal Slag</span></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const btn = document.getElementById('calcBreedBtn');
+        if (!btn) return;
+        btn.addEventListener('click', function() {
+          const a = document.getElementById('specimenA').value;
+          const b = document.getElementById('specimenB').value;
+          const method = document.getElementById('breedMethod').value;
+          const title = document.getElementById('hybridTitle');
+          const compat = document.getElementById('compatBadge');
+          const inherited = document.getElementById('inheritedTrait');
+          const chemical = document.getElementById('chemicalProfile');
+          const perk = document.getElementById('emergentPerk');
+          const soil = document.getElementById('soilReq');
+
+          if (a === b) {
+            title.innerText = '⚠️ Purebred Lineage (Reinforced Strain)';
+            compat.style.background = '#854d0e';
+            compat.style.color = '#fef08a';
+            compat.innerText = 'STABILIZED (100%)';
+            inherited.innerText = 'Homozygous Trait Lock';
+            chemical.innerText = 'Double Concentration';
+            perk.innerText = '+50% Yield Growth Speed';
+            soil.innerText = 'Standard Native Biome Loam';
+          } else {
+            compat.style.background = '#166534';
+            compat.style.color = '#4ade80';
+            compat.innerText = 'SUCCESSFUL HYBRID (94%)';
+            if (method === 'grafting') {
+              title.innerText = '🌿 Chimeric ' + a.replace('_', ' ').toUpperCase() + ' × ' + b.replace('_', ' ').toUpperCase();
+              inherited.innerText = 'Reinforced Vascular Stems + Stiff Spines';
+              chemical.innerText = 'Metabolic Adaptability';
+              perk.innerText = '+40% Extreme Weather Resistance';
+              soil.innerText = 'Aerated Pumice Bed';
+            } else {
+              title.innerText = '✨ Bio-Synthesized Genetic Hybrid #' + Math.floor(100 + Math.random() * 900);
+              inherited.innerText = 'High Caloric Nutrient Density';
+              chemical.innerText = 'Enzymatic Toxin Neutralization';
+              perk.innerText = 'Natural Bioluminescent Glow in Dark Labs';
+              soil.innerText = 'Hydroponic Mineral Slurry';
+            }
+          }
+        });
+      })();
+    </script>
+
+    <p style="margin-top: 1.5rem;">Note the <strong>emergent trait</strong> (Drought resistant) — hybrid combinations sometimes produce traits that neither parent had individually. Discovering these emergent properties is a key part of the game's research loop.</p>
   </section>
 
   <section class="content-section">

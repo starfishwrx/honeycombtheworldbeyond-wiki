@@ -58,18 +58,22 @@
       "check": "live robots.txt and sitemap.xml",
       "evidence": "robots.txt and sitemap.xml returned 200 OK with canonical URL definitions.",
       "observed_at": "2026-09-03T16:36:37Z"
+    },
+    {
+      "check": "live edge https",
+      "evidence": "https://honeycombtheworldbeyond.wiki/ and assets returned 200 OK via Cloudflare Edge SSL (CF-Cache HIT).",
+      "observed_at": "2026-09-04T02:33:00Z"
     }
   ],
   "configured_awaiting_data": [
-    "Cloudflare Proxied toggle (Orange Cloud) for instant edge HTTPS, or GitHub Pages Let's Encrypt cert issuance queue.",
-    "AdSense review submission via adsense_ajax.py once live HTTPS is verified.",
-    "Google Search Console initial crawl and index coverage after sitemap submission."
+    "AdSense review submission and crawler scan of ads.txt",
+    "Google Search Console initial crawl and index coverage after sitemap submission"
   ],
   "requested_not_guaranteed": [
     "Search indexation and rich thumbnail previews requested via sitemap.xml and JSON-LD image declarations."
   ],
   "blocked": [],
   "rollback_status": "Git commit history preserved on GitHub; local working tree intact.",
-  "current_bottleneck": "Awaiting Cloudflare Edge SSL activation (turning proxy orange cloud on) or GitHub Pages cert completion.",
-  "next_check_at": "2026-09-04T00:00:00Z"
+  "current_bottleneck": "Resolved: Cloudflare Edge HTTPS verified 200 OK; ready for September 8, 2026 launch day indexing wave.",
+  "next_check_at": "2026-09-08T00:00:00Z"
 }
