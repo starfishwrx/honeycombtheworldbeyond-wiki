@@ -1,5 +1,1 @@
-# Cloudflare Pages Redirects
-https://honeycombtheworldbeyond.wiki/* https://honeycombtheworldbeyond.wiki/:splat 301!
-http://honeycombtheworldbeyond.wiki/* https://honeycombtheworldbeyond.wiki/:splat 301!
-http://www.honeycombtheworldbeyond.wiki/* https://honeycombtheworldbeyond.wiki/:splat 301!
-https://www.honeycombtheworldbeyond.wiki/* https://honeycombtheworldbeyond.wiki/:splat 301!
+# Cloudflare Redirects

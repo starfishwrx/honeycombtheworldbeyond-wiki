@@ -1,3 +1,6 @@
 node_modules/
 *.log
 .DS_Store
+.wrangler/
+tmp_out/
+__pycache__/

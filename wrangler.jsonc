@@ -9,5 +9,15 @@
     "directory": "./dist",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "honeycombtheworldbeyond.wiki/*",
+      "zone_name": "honeycombtheworldbeyond.wiki"
+    },
+    {
+      "pattern": "www.honeycombtheworldbeyond.wiki/*",
+      "zone_name": "honeycombtheworldbeyond.wiki"
+    }
+  ]
 }
