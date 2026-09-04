@@ -1,0 +1,105 @@
+{
+  "schema_version": "1",
+  "canonical_base": "https://honeycombtheworldbeyond.wiki/",
+  "build_output": ".",
+  "evidence_register": "EVIDENCE.md",
+  "domain": "honeycombtheworldbeyond.wiki",
+  "checked_at": "2026-09-03T03:00:00Z",
+  "measurement": {
+    "hypothesis": "A direct first-run path will earn search clicks and guide players through Sota7 survival and bioengineering crossbreeding.",
+    "primary_signal": "beginner_survival_guide_completion",
+    "guardrail": "direct answers remain visible before analytics or advertising UI"
+  },
+  "analytics": {
+    "enabled": true,
+    "consent_required": true
+  },
+  "pages": [
+    {
+      "path": "index.html",
+      "role": "home",
+      "intent": "honeycomb the world beyond wiki",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 100,
+      "source_ids": ["steam-official-1510440"]
+    },
+    {
+      "path": "guides.html",
+      "role": "guide",
+      "intent": "honeycomb the world beyond beginner survival guide",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 95,
+      "source_ids": ["steam-official-1510440", "demo-firsthand-20260831"]
+    },
+    {
+      "path": "crossbreeding.html",
+      "role": "guide",
+      "intent": "honeycomb the world beyond crossbreeding grafting allogamy guide",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 95,
+      "source_ids": ["steam-official-1510440", "developer-interview"]
+    },
+    {
+      "path": "biomes.html",
+      "role": "database",
+      "intent": "honeycomb the world beyond sota7 biomes list",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 90,
+      "source_ids": ["steam-official-1510440"]
+    },
+    {
+      "path": "species.html",
+      "role": "database",
+      "intent": "honeycomb the world beyond alien species flora fauna traits",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 90,
+      "source_ids": ["steam-official-1510440", "demo-firsthand-20260831"]
+    },
+    {
+      "path": "base-building.html",
+      "role": "guide",
+      "intent": "honeycomb the world beyond base building module priority",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 85,
+      "source_ids": ["steam-official-1510440"]
+    },
+    {
+      "path": "demo-guide.html",
+      "role": "walkthrough",
+      "intent": "honeycomb the world beyond demo walkthrough",
+      "indexable": true,
+      "first_session": true,
+      "priority_score": 85,
+      "source_ids": ["demo-firsthand-20260831"]
+    },
+    {
+      "path": "privacy.html",
+      "role": "policy",
+      "intent": "privacy policy",
+      "indexable": true,
+      "first_session": false,
+      "priority_score": 50,
+      "source_ids": []
+    }
+  ],
+  "seo_requirements": {
+    "has_title": true,
+    "has_meta_description": true,
+    "has_canonical": true,
+    "has_og_tags": true,
+    "has_twitter_card": true,
+    "has_json_ld": true,
+    "has_robots_txt": true,
+    "has_sitemap_xml": true,
+    "has_google_supported_favicons": true,
+    "has_ad_wrapper": true,
+    "has_sticky_toc": true,
+    "has_direct_answer": true
+  }
+}

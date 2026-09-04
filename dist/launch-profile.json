@@ -1,0 +1,59 @@
+{
+  "schema_version": "1",
+  "provider_guidance_checked_at": "2026-09-03",
+  "provider_guidance_sources": [
+    "https://developers.cloudflare.com/pages/",
+    "https://docs.github.com/en/pages"
+  ],
+  "site": {
+    "project_root": ".",
+    "build_command": "node tests/verify.mjs",
+    "test_command": "node tests/verify.mjs",
+    "build_output": "."
+  },
+  "hosting": {
+    "provider": "github-pages",
+    "project_name": "honeycombtheworldbeyond-wiki",
+    "existing_project": true
+  },
+  "domain": {
+    "registrar": "spaceship",
+    "apex": "honeycombtheworldbeyond.wiki",
+    "canonical_host": "honeycombtheworldbeyond.wiki",
+    "authoritative_dns": "cloudflare",
+    "apex_strategy": "canonical-apex"
+  },
+  "search": {
+    "provider": "google-search-console",
+    "property_type": "url-prefix",
+    "sitemap_url": "https://honeycombtheworldbeyond.wiki/sitemap.xml"
+  },
+  "analytics": {
+    "provider": "ga4",
+    "measurement_id": "env:GA_MEASUREMENT_ID",
+    "consent_mode": "basic"
+  },
+  "credentials": {
+    "github_token": "env:GITHUB_TOKEN",
+    "cloudflare_api_token": "env:CLOUDFLARE_API_TOKEN",
+    "spaceship_api_key": "env:SPACESHIP_API_KEY",
+    "spaceship_api_secret": "env:SPACESHIP_API_SECRET"
+  },
+  "change_plan": [
+    "Verify local site quality with audit_site.py and verify.mjs.",
+    "Publish atomic single-tree commit to GitHub main branch.",
+    "Enable and route Pages hosting to custom apex domain honeycombtheworldbeyond.wiki.",
+    "Submit sitemap to Google Search Console and Bing Webmaster Tools once public DNS propagates."
+  ],
+  "rollback_plan": [
+    "Reset main branch ref on GitHub to previous verified commit if build fails.",
+    "Preserve original registrar NS and DNS records snapshot before applying custom NS changes."
+  ],
+  "authorized_actions": [
+    "create-hosting-project",
+    "deploy-production",
+    "change-dns",
+    "configure-search-console",
+    "configure-analytics"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "candidate_term": "honeycomb the world beyond",
+  "canonical_game_name": "Honeycomb: The World Beyond",
+  "entity_type": "game",
+  "observed_at": "2026-09-02",
+  "markets": ["worldwide"],
+  "languages": ["en"],
+  "signal": {
+    "window": "last 7 days",
+    "evidence_urls": [
+      "https://store.steampowered.com/app/1510440/Honeycomb_The_World_Beyond/",
+      "https://steamcommunity.com/app/1510440/",
+      "https://honeycomb-game.com/"
+    ],
+    "summary": "Steam demo released on August 31, 2026. Full game launching on September 8, 2026. High search acceleration for bioengineering, crossbreeding, and Sota7 survival mechanics."
+  },
+  "competition": {
+    "exact_match_domains": ["honeycombgame.wiki"],
+    "observed_gaps": [
+      "Existing competitor has sparse pre-launch stubs.",
+      "No crossbreeding calculator or trait inheritance tree.",
+      "No Sota7 biome breakdown with hazards and resources.",
+      "No demo walkthrough covering the first 60 minutes."
+    ],
+    "checked_at": "2026-09-02"
+  },
+  "official_sources": [
+    "https://store.steampowered.com/app/1510440/Honeycomb_The_World_Beyond/",
+    "https://honeycomb-game.com/"
+  ],
+  "decision": "build",
+  "confidence": "high",
+  "rationale": "High search interest ahead of September 8 launch. First-hand demo playable. Serious intent gaps in current SERP.",
+  "current_bottleneck_hypothesis": "Players need immediate, verified guidance on Sota7 survival and crossbreeding combinations.",
+  "first_measurement": "Track organic impressions, survival guide reads, and crossbreeding guide engagement within the first 14 days of launch.",
+  "domain": "honeycombtheworldbeyond.wiki",
+  "steam_appid": "1510440",
+  "developer": "Frozen Way",
+  "publisher": "Snail Games USA",
+  "status": "GO_NOW",
+  "design_tokens": {
+    "color_bg": "#091c18",
+    "color_surface": "#122820",
+    "color_brand": "#4ecdc4",
+    "color_accent": "#f7d060",
+    "color_bio": "#8b5cf6",
+    "color_nature": "#4a9e5c",
+    "color_danger": "#ef4444"
+  }
+}

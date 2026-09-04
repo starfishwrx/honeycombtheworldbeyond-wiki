@@ -1,0 +1,16 @@
+{
+  "name": "Honeycomb: The World Beyond Wiki",
+  "short_name": "Honeycomb Wiki",
+  "description": "Complete fan wiki for Honeycomb: The World Beyond — survival guides, crossbreeding database, biomes, and species index for planet Sota7.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#091c18",
+  "theme_color": "#4ecdc4",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
