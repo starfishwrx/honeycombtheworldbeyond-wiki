@@ -1,7 +1,10 @@
 {
   "site_url": "https://honeycombtheworldbeyond.wiki/",
   "publisher_id": "pub-1143439996470265",
-  "head_methods": ["meta"],
+  "head_methods": [
+    "meta",
+    "script"
+  ],
   "source_root": ".",
   "html_files": [
     "index.html",
